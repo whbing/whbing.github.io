@@ -1,0 +1,30 @@
+/*----------------------以下设置banner----------------*/
+.inner {
+    text-align: center;
+    /*margin: 15% auto;*/
+    margin: -5% 10% 15% 10%;
+    position: relative;
+    /* top: 180px; */
+}
+.inner h1{
+    color:#fff;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+.inner .sub-heading {
+    position: relative;
+    line-height: 30px;
+    color: #fff;
+    font-size: 18px;
+    display: inline-block;
+    height: 50px;
+    margin-top: 60px;
+    border-bottom: 1px solid #ccc; /* #ccc换成链接的颜色 */
+    padding-bottom: 10px; /*这里设置你要空的距离*/
+}
+.navigation-wrapper{
+    margin-top:10%;
+}
+.un_decration:hover{
+    text-decoration: none;
+}
