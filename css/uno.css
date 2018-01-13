@@ -1034,8 +1034,9 @@ code {
 .time,
 .author,
 .tags {
-  font-size: .8em;
-  color: #c7c7c7; }
+  font-size: .95em;
+  color: #c7c7c7;
+}
   .date a,
   .time a,
   .author a,
@@ -1203,9 +1204,11 @@ hr {
   background-size:cover;
 }
 
+/*手机端首页展示的页面宽度*/
 .panel-cover--collapsed {
-  width: 32%;
-  max-width: 430px; }
+  /*width: 24%;*/
+  width: 320px;
+}
 
 .panel-cover--overlay { /*图片遮罩层*/
   display: block;
@@ -1220,10 +1223,10 @@ hr {
   /*
   background: -webkit-radial-gradient(red, green, blue); Safari 5.1 - 6.0
   */
-  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
-  background: -o-radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); /* Opera 11.6 - 12.0 */
-  background: -moz-radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); /* Firefox 3.6 - 15 */
-  background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); /* 标准的语法 */
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  background: -o-radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)); /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)); /* Firefox 3.6 - 15 */
+  background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)); /* 标准的语法 */
 }
 .panel-cover__logo {
   margin-bottom: .2em; }
@@ -1437,7 +1440,7 @@ i {
   margin-bottom: .2em;
   font-size: 1.8em;
   -webkit-font-smoothing: antialiased;
-  font-weight: bold;
+  /*font-weight: bold;*/
   line-height: 1.3em; }
   .post-list__post-title a {
     color: #333333; }
@@ -1452,7 +1455,7 @@ i {
 
 .post-list__meta--date {
   margin-right: .5em;
-  color: #c7c7c7; }
+  color: #999; }
 
 .post-list__meta--tags {
   margin-left: .5em; }
@@ -1463,7 +1466,8 @@ i {
   border-top: 1px solid #dddddd; }
 
 *:focus {
-  outline: none; }
+  outline: none;
+}
 
 input[type="text"],
 input[type="password"],
@@ -1484,7 +1488,8 @@ input[type="tel"] {
   border: 1px solid #dddddd;
   border-radius: 3px;
   font-size: .9em;
-  color: #666666; }
+  color: #666666;
+}
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="datetime"]:focus,
@@ -1526,7 +1531,8 @@ input[type="tel"] {
   input[type="url"]:-moz-placeholder,
   input[type="search"]:-moz-placeholder,
   input[type="tel"]:-moz-placeholder {
-    color: #cccccc; }
+    color: #cccccc;
+  }
   input[type="text"]::-moz-placeholder,
   input[type="password"]::-moz-placeholder,
   input[type="datetime"]::-moz-placeholder,
@@ -1558,7 +1564,9 @@ input[type="tel"] {
 
 @media all and (min-width: 1300px) {
   .content-wrapper {
-    margin-left: 430px; } }
+    margin-left: 330px;
+  }
+}
 @media all and (max-width: 1100px) {
   .panel-cover__logo {
     width: 70px; }
@@ -1578,11 +1586,13 @@ input[type="tel"] {
     margin-left: 0; } }
 @media all and (max-width: 960px) {
   .btn-mobile-menu {
-    display: block; }
+    display: block;
+  }
 
   .panel-main {
     display: table;
-    position: relative; }
+    position: relative;
+  }
 
   .panel-cover--collapsed {
     width: 100%;

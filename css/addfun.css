@@ -28,3 +28,15 @@
 .un_decration:hover{
     text-decoration: none;
 }
+/*非首页时列表*/
+.not_home_li{
+    display: block;
+}
+.not_home_li a{
+    border: none;/*去除圆角boeder*/
+}
+.post-meta-divider{
+    margin-left: 2px;
+    margin-right: 8px;
+}
+

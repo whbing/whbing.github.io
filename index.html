@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- 这一部分是所有页面都要加载的 -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
@@ -40,8 +41,8 @@
     <link rel="stylesheet" href="/css/uno.css">
     <link rel="stylesheet" href="/css/highlight.css">
     <link rel="stylesheet" href="/css/archive.css">
-    <link rel="stylesheet" href="/css/china-social-icon.css">
 
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/addfun.css">
 
     <!--move the file to pre-->
@@ -56,7 +57,8 @@
         <i class="icon icon-list btn-mobile-menu__icon"></i>
         <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
     </span>
-    <!-- 这里单独引用side-pannel模块 -->
+    <!-- 这里单独引用side-pannel模块,里面是一个header标签 -->
+
     <!--该文件仅包含header部分，包括背景图、遮罩层、目录等-->
  
 <header class="panel-cover">
@@ -71,6 +73,8 @@
 
         
 
+        <!-- -----------------start首页布局----------------------- -->
+        
         <!-- 加入动态文字-->
         <script>
             $(function(){
@@ -145,7 +149,6 @@
             }
         </style>
         <div class="inner">
-
             <!--这是打印的地方-->
             <div id="typed-strings" style="display: none;"><!--这个仅仅是要打印的内容-->
                 <p>Who can block you , ^500 others or yourself ?^2000</p>
@@ -159,7 +162,7 @@
                 <span id="typed"  style="white-space:pre"></span>
             </div>
         </div>
-        <!--end-->
+        <!--end inner-->
 
         <div class="wow zoomIn" data-wow-duration="1s" data-wow-offset="100">
             <div class="wow tada" data-wow-delay="1s" data-wow-duration="1s">
@@ -173,6 +176,10 @@
         <hr class="panel-cover__divider" />
 
         
+        <!-- -----------------end 首页---------------------------- -->
+        <!-- -----------------start其他页面布局-------------------- -->
+        
+        <!-- -----------------end 其他---------------------------- -->
 
         <div class="navigation-wrapper">
 
@@ -181,18 +188,24 @@
 
               
                 
-                <li class="navigation__item">
-                    <a href="/#blog" title="" class="blog-button">文章首页</a>
+                
+                    <li class="navigation__item" >
+                
+                    <a href="/blog" title="" class="">文章</a>
                 </li>
               
                 
-                <li class="navigation__item">
+                
+                    <li class="navigation__item" >
+                
+                    <a href="/archive" title="" class="">归档</a>
+                </li>
+              
+                
+                
+                    <li class="navigation__item" >
+                
                     <a href="/about" title="" class="">关于</a>
-                </li>
-              
-                
-                <li class="navigation__item">
-                    <a href="/archive" title="" class="">文章归档</a>
                 </li>
               
 
@@ -261,7 +274,8 @@ classes that you can use:
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner entry">
-            
+            <!-- 首页body部分的内容，其实不需要的 -->
+
 
 
    <!-- do nothing -->
@@ -270,6 +284,28 @@ classes that you can use:
 <div class="main-post-list">
     <ol class="post-list">
     
+    <li>
+
+      <h2 class="post-list__post-title post-title">
+        <a href="/2021/01/08/test-md - 副本/" title="link to js18">js18</a>
+      </h2>
+
+      <div class="post-list__meta">
+
+        <time datetime="2021-01-08" class="post-list__meta--date date">2021-01-08</time> 
+      </div>
+
+      <div class="excerpt">
+        
+          <p>使用Scrapy爬虫天猫数据</p>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</div></pre></td></tr></table></figure>
+        
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
     
     <li>
 
@@ -292,7 +328,7 @@ classes that you can use:
     <li>
 
       <h2 class="post-list__post-title post-title">
-        <a href="/2018/01/08/test-md/" title="link to Scrapy爬虫天猫数据">Scrapy爬虫天猫数据</a>
+        <a href="/2018/01/08/test-md - 副本 (12)/" title="link to Scrapy爬虫天猫数据16">Scrapy爬虫天猫数据16</a>
       </h2>
 
       <div class="post-list__meta">
@@ -301,6 +337,12 @@ classes that you can use:
       </div>
 
       <div class="excerpt">
+        
+          <hr>
+<p>使用Scrapy爬虫天猫数据</p>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</div></pre></td></tr></table></figure>
         
       </div>
 
@@ -313,9 +355,14 @@ classes that you can use:
 
 <nav class="pagination" role="navigation">
     
-
-    <span class="pagination__page-number"> 1 / 1</span>
     
+
+    
+
+    <span class="pagination__page-number"> 1 / 7</span>
+    
+    
+        <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/2/">下一页 &rarr;</a>
     
 </nav>
 
@@ -323,41 +370,17 @@ classes that you can use:
 </div>
             <footer class="footer">
 
-    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    <span class="footer__copyright">&copy; 2017-2018. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Whbing</a></span>
     
 </footer>
         </div>
     </div>
 
-    <!-- js files -->
-    <!--jquery file has moved to pre->
-    <script src="/js/main.js"></script>
-    <script src="/js/scale.fix.js"></script>
+    <!-- 这里的页面单独提出来了-->
 
     <!--myadd-->
     <script src="/js/wow.min.js"></script>
     <script src="/js/addfun.js"></script><!--init the wowJS-->
-
-
-    
-
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript"> 
-        $(document).ready(function(){
-            MathJax.Hub.Config({ 
-                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
-            });
-        });
-    </script>
-
-
-    
-    
-    
-    <!--kill ie6 -->
-<!--[if IE 6]>
-  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
-<![endif]-->
 
 </body>
 </html>
