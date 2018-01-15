@@ -99,14 +99,35 @@
                 
                     <li class="navigation__item not_home_li" >
                 
-                    <a href="/blog" title="" class="">文章</a>
+                    <a href="/archives" title="" class="">文章</a>
                 </li>
               
                 
                 
                     <li class="navigation__item not_home_li" >
                 
-                    <a href="/archive" title="" class="">归档</a>
+                    <a href="/archive" title="" class="">分类</a>
+                </li>
+              
+                
+                
+                    <li class="navigation__item not_home_li" >
+                
+                    <a href="/general" title="" class="">归档</a>
+                </li>
+              
+                
+                
+                    <li class="navigation__item not_home_li" >
+                
+                    <a href="/gallery" title="" class="">摄影</a>
+                </li>
+              
+                
+                
+                    <li class="navigation__item not_home_li" >
+                
+                    <a href="/others" title="" class="">其他</a>
                 </li>
               
                 
@@ -184,16 +205,14 @@ classes that you can use:
         <div class="content-wrapper__inner entry">
             
 
-
-
 <!--这里是归档的页面-->
 
 <article class="post-container post-container--single">
 
   <header class="post-header">
-    
+    <!--
     <h1 class="post-title">归档</h1>
-
+    -->
     <section id="post-content" class="article-content post">
         
     </section>
@@ -227,22 +246,30 @@ classes that you can use:
 
 
     <h3>标签</h3>
-    <div class="tagslist">
-        
-            
-                <span><a href="/tags/python/" title="python">python<sup>16</sup></a></span>
-            
+    <span id="tag-cloud-bt" class="tag-switch tag-cloud-bt">显示标签云</span>
+    <span id="tag-list-bt" class="tag-switch tag-list-bt">显示列表</span>
+
+    <!-- 以列表形式显示 -->
+    <div id ="tag-list" class="tagslist">
         
             
                 <span><a href="/tags/scrapy/" title="scrapy">scrapy<sup>16</sup></a></span>
             
         
             
-                <span><a href="/tags/java/" title="java">java<sup>1</sup></a></span>
+                <span><a href="/tags/python/" title="python">python<sup>14</sup></a></span>
             
         
             
-                <span><a href="/tags/netty/" title="netty">netty<sup>1</sup></a></span>
+                <span><a href="/tags/java/" title="java">java<sup>3</sup></a></span>
+            
+        
+            
+                <span><a href="/tags/php/" title="php">php<sup>2</sup></a></span>
+            
+        
+            
+                <span><a href="/tags/ruby/" title="ruby">ruby<sup>1</sup></a></span>
             
         
             
@@ -250,20 +277,38 @@ classes that you can use:
             
         
             
+                <span><a href="/tags/c/" title="c">c<sup>1</sup></a></span>
+            
+        
+            
                 <span><a href="/tags/css/" title="css">css<sup>1</sup></a></span>
             
         
             
+                <span><a href="/tags/netty/" title="netty">netty<sup>1</sup></a></span>
+            
+        
+            
+                <span><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></span>
+            
+        
+            
         
     </div>
 
-
+    <!-- 以标签云的形式显示 -->
+    <div id ="tag-cloud" class="tag-cloud-tags">
+        <a href="/tags/c/" style="font-size: 14px; color: #b9a8a8">c</a> <a href="/tags/css/" style="font-size: 14px; color: #b9a8a8">css</a> <a href="/tags/java/" style="font-size: 22px; color: #dc5454">java</a> <a href="/tags/js/" style="font-size: 14px; color: #b9a8a8">js</a> <a href="/tags/netty/" style="font-size: 14px; color: #b9a8a8">netty</a> <a href="/tags/php/" style="font-size: 18px; color: #cb7e7e">php</a> <a href="/tags/python/" style="font-size: 26px; color: #ee2a2a">python</a> <a href="/tags/ruby/" style="font-size: 14px; color: #b9a8a8">ruby</a> <a href="/tags/scrapy/" style="font-size: 30px; color: #f00">scrapy</a> <a href="/tags/算法/" style="font-size: 14px; color: #b9a8a8">算法</a>
+    </div>
+    
+<!--
 
     <h3>归档</h3>
     <div class="archiveslist">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
+-->
 
 </div>
             <footer class="footer">
