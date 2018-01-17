@@ -1367,7 +1367,8 @@ hr {
 
 nav {
   display: inline-block;
-  position: relative; }
+  position: relative;
+}
 
 .navigation {
   display: inline-block;
@@ -1452,7 +1453,7 @@ i {
 
 .post-list__meta {
   display: block;
-  margin: .7em 0 0 0;
+  margin: .7em 0 0.7em 0;
   font-size: .9em;
   color: #c7c7c7; }
 
