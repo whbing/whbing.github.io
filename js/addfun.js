@@ -7,6 +7,9 @@ $(function() {
 /*以下这个初始化时wow.js*/
 new WOW().init();
 
+// highlight
+hljs.initHighlightingOnLoad();
+
 $(".tag-switch").click(function() {
     if ($("#tag-list-bt").css("display") == "none") {
 
