@@ -1,0 +1,24 @@
+.archive-meta h3 {
+    line-height: 2.8;
+}
+
+.archive-meta sup {
+    font-size: 10px;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px;
+    background: #f5f5f5 none repeat scroll 0 0;
+    vertical-align: top;
+}
+
+.archive-meta span {
+    display: inline-flex;
+}
+
+.archive-meta .archive-list-count::before {
+    content: " (";
+}
+
+.archive-meta .archive-list-count::after {
+    content: ")";
+}
