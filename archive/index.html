@@ -8,7 +8,7 @@
     
 
     <title>
-      归档 
+      归档
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -56,7 +56,8 @@
         <!-- 这里单独引用side-pannel模块,里面是一个header标签 -->
         <!--该文件仅包含header部分，包括背景图、遮罩层、目录等-->
 
-<header class="panel-cover panel-cover--collapsed">
+<header class="panel-cover panel-cover--collapsed panel-cover--collapsed--origin">
+
 
 
   <div class="panel-main">
@@ -192,7 +193,12 @@ classes that you can use:
 
     <div class="panel-cover--overlay"></div>
   </div>
+
 </header>
+<!--如果不是home，加一个side的复制层-->
+
+    <div class="panel-cover--collapsed panel-cover--collapsed--copy"></div>
+
 
         <div class="content-wrapper">
             <div class="content-wrapper__inner entry">
@@ -223,7 +229,11 @@ classes that you can use:
     <div class="categorieslist">
         
           
-            <span><a href="/categories/爬虫/" title="爬虫">爬虫<sup>1</sup></a></span>
+            <span><a href="/categories/测试2/" title="测试2">测试2<sup>1</sup></a></span>
+          
+        
+          
+            <span><a href="/categories/爬虫/" title="爬虫">爬虫<sup>4</sup></a></span>
           
         
      </div>
@@ -238,11 +248,15 @@ classes that you can use:
     <div id ="tag-list" class="tagslist">
         
             
-                <span><a href="/tags/python/" title="python">python<sup>1</sup></a></span>
+                <span><a href="/tags/python/" title="python">python<sup>4</sup></a></span>
             
         
             
-                <span><a href="/tags/scrapy/" title="scrapy">scrapy<sup>1</sup></a></span>
+                <span><a href="/tags/scrapy/" title="scrapy">scrapy<sup>4</sup></a></span>
+            
+        
+            
+                <span><a href="/tags/scala/" title="scala">scala<sup>1</sup></a></span>
             
         
             
@@ -251,14 +265,14 @@ classes that you can use:
 
     <!-- 以标签云的形式显示 -->
     <div id ="tag-cloud" class="tag-cloud-tags">
-        <a href="/tags/python/" style="font-size: 14px; color: #b9a8a8">python</a> <a href="/tags/scrapy/" style="font-size: 14px; color: #b9a8a8">scrapy</a>
+        <a href="/tags/python/" style="font-size: 30px; color: #f00">python</a> <a href="/tags/scala/" style="font-size: 14px; color: #b9a8a8">scala</a> <a href="/tags/scrapy/" style="font-size: 30px; color: #f00">scrapy</a>
     </div>
     
 <!--
 
     <h3>归档</h3>
     <div class="archiveslist">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">3</span></li></ul>
     </div>
 
 -->
@@ -301,8 +315,16 @@ classes that you can use:
                     </div>
                     <nav class="header-menu">
                         <ul>
-                            <li class="mobile-menu-li"><a class="active" href="/">主页</a></li>
-                            <li class="mobile-menu-li"><a href="/archives">归档</a></li>
+                            <li class="mobile-menu-li mobile-menu-home">
+                                
+                                    <a href="/">主页</a>
+                                
+                            </li>
+                            <li class="mobile-menu-li mobile-menu-archives">
+                                
+                                    <a href="/general/" >归档</a>
+                                
+                            </li>
                         </ul>
                     </nav>
                 </header>
@@ -339,7 +361,11 @@ classes that you can use:
     <div class="categorieslist">
         
           
-            <span><a href="/categories/爬虫/" title="爬虫">爬虫<sup>1</sup></a></span>
+            <span><a href="/categories/测试2/" title="测试2">测试2<sup>1</sup></a></span>
+          
+        
+          
+            <span><a href="/categories/爬虫/" title="爬虫">爬虫<sup>4</sup></a></span>
           
         
      </div>
@@ -354,11 +380,15 @@ classes that you can use:
     <div id ="tag-list" class="tagslist">
         
             
-                <span><a href="/tags/python/" title="python">python<sup>1</sup></a></span>
+                <span><a href="/tags/python/" title="python">python<sup>4</sup></a></span>
             
         
             
-                <span><a href="/tags/scrapy/" title="scrapy">scrapy<sup>1</sup></a></span>
+                <span><a href="/tags/scrapy/" title="scrapy">scrapy<sup>4</sup></a></span>
+            
+        
+            
+                <span><a href="/tags/scala/" title="scala">scala<sup>1</sup></a></span>
             
         
             
@@ -367,14 +397,14 @@ classes that you can use:
 
     <!-- 以标签云的形式显示 -->
     <div id ="tag-cloud" class="tag-cloud-tags">
-        <a href="/tags/python/" style="font-size: 14px; color: #b9a8a8">python</a> <a href="/tags/scrapy/" style="font-size: 14px; color: #b9a8a8">scrapy</a>
+        <a href="/tags/python/" style="font-size: 30px; color: #f00">python</a> <a href="/tags/scala/" style="font-size: 14px; color: #b9a8a8">scala</a> <a href="/tags/scrapy/" style="font-size: 30px; color: #f00">scrapy</a>
     </div>
     
 <!--
 
     <h3>归档</h3>
     <div class="archiveslist">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">3</span></li></ul>
     </div>
 
 -->
@@ -386,6 +416,7 @@ classes that you can use:
     
 </footer>
             </div>
+            <script src="/js/zepto.min.js"></script>
         </div>
     </div>
     <!-- 这里的页面单独提出来了-->

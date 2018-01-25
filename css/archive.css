@@ -1,5 +1,5 @@
 .archive-meta h3 {
-    line-height: 2.0;
+    line-height: 2.8;
 }
 
 .archive-meta sup {
@@ -12,8 +12,6 @@
 }
 
 .archive-meta span {
-    margin-right: 20px;
-    margin-bottom: 20px;
     display: inline-flex;
 }
 

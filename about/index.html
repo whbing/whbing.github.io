@@ -8,7 +8,7 @@
     
 
     <title>
-      about 
+      about
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -56,7 +56,8 @@
         <!-- 这里单独引用side-pannel模块,里面是一个header标签 -->
         <!--该文件仅包含header部分，包括背景图、遮罩层、目录等-->
 
-<header class="panel-cover panel-cover--collapsed">
+<header class="panel-cover panel-cover--collapsed panel-cover--collapsed--origin">
+
 
 
   <div class="panel-main">
@@ -192,7 +193,12 @@ classes that you can use:
 
     <div class="panel-cover--overlay"></div>
   </div>
+
 </header>
+<!--如果不是home，加一个side的复制层-->
+
+    <div class="panel-cover--collapsed panel-cover--collapsed--copy"></div>
+
 
         <div class="content-wrapper">
             <div class="content-wrapper__inner entry">
@@ -259,8 +265,16 @@ classes that you can use:
                     </div>
                     <nav class="header-menu">
                         <ul>
-                            <li class="mobile-menu-li"><a class="active" href="/">主页</a></li>
-                            <li class="mobile-menu-li"><a href="/archives">归档</a></li>
+                            <li class="mobile-menu-li mobile-menu-home">
+                                
+                                    <a href="/">主页</a>
+                                
+                            </li>
+                            <li class="mobile-menu-li mobile-menu-archives">
+                                
+                                    <a href="/general/" >归档</a>
+                                
+                            </li>
                         </ul>
                     </nav>
                 </header>
@@ -302,6 +316,7 @@ classes that you can use:
     
 </footer>
             </div>
+            <script src="/js/zepto.min.js"></script>
         </div>
     </div>
     <!-- 这里的页面单独提出来了-->

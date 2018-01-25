@@ -8,7 +8,7 @@
     
 
     <title>
-      others
+      page 2 | whbing
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,17 +16,18 @@
       <meta name="author" content="whbing">
     
     
+      <meta name="description" content="王洪兵的个人网站">
+    
 
     <meta name="description" content="王洪兵的个人网站">
 <meta property="og:type" content="website">
-<meta property="og:title" content="others">
-<meta property="og:url" content="https://whbing.github.io/others/index.html">
+<meta property="og:title" content="page 2 | whbing">
+<meta property="og:url" content="https://whbing.github.io/page/2/index.html">
 <meta property="og:site_name" content="whbing">
 <meta property="og:description" content="王洪兵的个人网站">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-15T08:26:08.711Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="others">
+<meta name="twitter:title" content="page 2 | whbing">
 <meta name="twitter:description" content="王洪兵的个人网站">
     
     
@@ -55,9 +56,8 @@
     <div id="pc">
         <!-- 这里单独引用side-pannel模块,里面是一个header标签 -->
         <!--该文件仅包含header部分，包括背景图、遮罩层、目录等-->
-
-<header class="panel-cover panel-cover--collapsed panel-cover--collapsed--origin">
-
+ 
+<header class="panel-cover">
 
 
   <div class="panel-main">
@@ -68,18 +68,109 @@
 
         <!-- -----------------start首页布局----------------------- -->
         
-        <!-- -----------------end 首页---------------------------- -->
-        <!-- -----------------start其他页面布局-------------------- -->
-        
-        <h1 class="panel-cover__title panel-title"><a class="un_decration" href="/" title="link to homepage">whbing</a></h1>
+        <!-- 加入动态文字-->
+        <script>
+            $(function(){
+                //获取浏览器宽度
+                var _width = $(window).width();
+                if(_width < 768){
+                    var $mobile_string=$("#mobile-typed-strings").html();
+                    $("#typed-strings").html($mobile_string);
+                }
+            });
+            $(function(){
+                $("#typed").typed({
+                    // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+                    stringsElement: $('#typed-strings'),
+                    typeSpeed: 30,
+                    backDelay: 500,
+                    loop: true,
+                    contentType: 'html', // or text
+                    // defaults to false for infinite loop
+                    loopCount: false,
+                    showCursor: true,
+                    // character for cursor
+                    cursorChar: "<span class='glyphicon glyphicon-heart' style='color: red'></span>",
+                    callback: function(){ foo(); },
+                    resetCallback: function() { newTyped(); }
+                });
+
+                $(".reset").click(function(){
+                    $("#typed").typed('reset');
+                });
+            });
+            function newTyped(){ /* A new typed object */ }
+            function foo(){ console.log("Callback"); }
+
+        </script>
+
+        <style>
+            /* code for animated blinking cursor */
+            .typed-cursor{
+                opacity: 1;
+                font-weight: 100;
+                -webkit-animation: blink 0.7s infinite;
+                -moz-animation: blink 0.7s infinite;
+                -ms-animation: blink 0.7s infinite;
+                -o-animation: blink 0.7s infinite;
+                animation: blink 0.7s infinite;
+            }
+            @keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+            @-webkit-keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+            @-moz-keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+            @-ms-keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+            @-o-keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+        </style>
+        <div class="inner">
+            <!--这是打印的地方-->
+            <div id="typed-strings" style="display: none;"><!--这个仅仅是要打印的内容-->
+                <p>Who can block you , ^500 others or yourself ?^2000</p>
+                <p>if you know where to go ,^500 the whole world will give way to you.^4000</p>
+            </div>
+            <div id="mobile-typed-strings" style="display: none;"><!--这个仅仅是要打印的内容-->
+                <p>Who can block you , ^500 others or yourself ?^2000</p>
+                <p>if you know where to go ,<br>^500 the whole world will give way to you.^4000</p>
+            </div>
+            <div class="sub-heading">
+                <span id="typed"  style="white-space:pre"></span>
+            </div>
+        </div>
+        <!--end inner-->
+
+        <div class="wow zoomIn" data-wow-duration="1s" data-wow-offset="100">
+            <div class="wow tada" data-wow-delay="1s" data-wow-duration="1s">
+                <div class="wow rubberBand" data-wow-delay="2000ms" data-wow-duration="1s">
+                    <div class="wow pulse" data-wow-delay="300ms" data-wow-iteration="5" data-wow-duration="2s">
+                        <h1 class="panel-cover__title panel-title"><a class="un_decration" href="/" title="link to homepage">whbing</a></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
         <hr class="panel-cover__divider" />
 
         
-        <p class="panel-cover__description">
-            写是最好的记忆
-        </p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary" />
-        
+        <!-- -----------------end 首页---------------------------- -->
+        <!-- -----------------start其他页面布局-------------------- -->
         
         <!-- -----------------end 其他---------------------------- -->
 
@@ -91,42 +182,42 @@
               
                 
                 
-                    <li class="navigation__item not_home_li" >
+                    <li class="navigation__item" >
                 
                     <a href="/archives" title="" class="">文章</a>
                 </li>
               
                 
                 
-                    <li class="navigation__item not_home_li" >
+                    <li class="navigation__item" >
                 
                     <a href="/archive" title="" class="">分类</a>
                 </li>
               
                 
                 
-                    <li class="navigation__item not_home_li" >
+                    <li class="navigation__item" >
                 
                     <a href="/general" title="" class="">归档</a>
                 </li>
               
                 
                 
-                    <li class="navigation__item not_home_li" >
+                    <li class="navigation__item" >
                 
                     <a href="/gallery" title="" class="">摄影</a>
                 </li>
               
                 
                 
-                    <li class="navigation__item not_home_li" >
+                    <li class="navigation__item" >
                 
                     <a href="/others" title="" class="">其他</a>
                 </li>
               
                 
                 
-                    <li class="navigation__item not_home_li" >
+                    <li class="navigation__item" >
                 
                     <a href="/about" title="" class="">关于</a>
                 </li>
@@ -197,36 +288,16 @@ classes that you can use:
 </header>
 <!--如果不是home，加一个side的复制层-->
 
-    <div class="panel-cover--collapsed panel-cover--collapsed--copy"></div>
-
 
         <div class="content-wrapper">
             <div class="content-wrapper__inner entry">
-                
-
-<article class="post-container post-container--single">
-
-  <header class="post-header">
-    
-    <h1 class="post-title">others</h1>
-
-    
-
-  </header>
-
-  <section id="post-content" class="article-content post">
-    
-  </section>
-
-  <section class="post-comments">
-
-    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
-    
-</section>
+                <!-- 首页body部分的内容，其实不需要的 -->
 
 
-</article>
 
+   <!-- do nothing -->
+
+<!--首页不显示内容-->
 
                 <footer class="footer">
 
@@ -267,7 +338,7 @@ classes that you can use:
                         <ul>
                             <li class="mobile-menu-li mobile-menu-home">
                                 
-                                    <a href="/">主页</a>
+                                    <a class="active" href="/">主页</a>
                                 
                             </li>
                             <li class="mobile-menu-li mobile-menu-archives">
@@ -284,31 +355,13 @@ classes that you can use:
         </div>
         <div class="content-wrapper">
             <div class="content-wrapper__inner entry">
-                
-
-<article class="post-container post-container--single">
-
-  <header class="post-header">
-    
-    <h1 class="post-title">others</h1>
-
-    
-
-  </header>
-
-  <section id="post-content" class="article-content post">
-    
-  </section>
-
-  <section class="post-comments">
-
-    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
-    
-</section>
+                <!-- 首页body部分的内容，其实不需要的 -->
 
 
-</article>
 
+   <!-- do nothing -->
+
+<!--首页不显示内容-->
 
                 <footer class="footer">
 

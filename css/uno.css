@@ -1,9 +1,4 @@
-/*@import 'http://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400)';*/
 
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 @import url(../css/animate.css);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -11,8 +6,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
+.content-wrapper div,
+.content-wrapper span,
+.content-wrapper h1,
+.content-wrapper h2,
+.content-wrapper h3,
+.content-wrapper h4,
+.content-wrapper h5,
+.content-wrapper h6,
+.content-wrapper p{
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display: block; }
@@ -1091,11 +1098,12 @@ code {
   z-index: 800;
   width: 68%;
   max-width: 960px;
-  margin-left: 32%; }
+  margin-left: 32%;
+}
 
 .content-wrapper__inner {
-  margin: 0 10%;
-  padding: 50px 0; }
+   padding: 50px 0;
+}
 
 .footer {
   display: block;
@@ -1207,10 +1215,12 @@ hr {
   background-size:cover;
 }
 
-/*手机端首页展示的页面宽度*/
+/*非首页侧栏展示的页面宽度*/
 .panel-cover--collapsed {
-  /*width: 24%;*/
-  width: 320px;
+   width: 280px;
+}
+.panel-cover--collapsed li a{
+  font-weight: 400;
 }
 
 .panel-cover--overlay { /*图片遮罩层*/
@@ -1235,7 +1245,8 @@ hr {
   margin-bottom: .2em; }
 
 .panel-cover__description {
-  margin: 0 30px; }
+  margin: 0 0px;
+}
 
 .panel-cover__divider {
   width: 50%;
@@ -1568,7 +1579,8 @@ input[type="tel"] {
 
 @media all and (min-width: 1300px) {
   .content-wrapper {
-    margin-left: 330px;
+    margin-left: 40px;
+    display: inline-flex;
   }
 }
 @media all and (max-width: 1100px) {

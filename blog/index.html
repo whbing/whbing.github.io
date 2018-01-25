@@ -8,7 +8,7 @@
     
 
     <title>
-      blog 
+      blog
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -56,7 +56,8 @@
         <!-- 这里单独引用side-pannel模块,里面是一个header标签 -->
         <!--该文件仅包含header部分，包括背景图、遮罩层、目录等-->
 
-<header class="panel-cover panel-cover--collapsed">
+<header class="panel-cover panel-cover--collapsed panel-cover--collapsed--origin">
+
 
 
   <div class="panel-main">
@@ -192,7 +193,12 @@ classes that you can use:
 
     <div class="panel-cover--overlay"></div>
   </div>
+
 </header>
+<!--如果不是home，加一个side的复制层-->
+
+    <div class="panel-cover--collapsed panel-cover--collapsed--copy"></div>
+
 
         <div class="content-wrapper">
             <div class="content-wrapper__inner entry">
@@ -210,7 +216,241 @@ classes that you can use:
         
         <li>
             <h2 class="post-list__post-title post-title">
-                <a href="/2018/01/08/test-md/" title="link to Scrapy">Scrapy</a>
+                <a href="/2019/01/08/test-md - 副本 (2)/" title="link to 标题3">标题3</a>
+            </h2>
+
+            <div class="post-list__meta">
+                <span title="建立时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text-o"></i>
+                </span>
+                <time datetime="2019-01-08" class="post-list__meta--date date">2019-01-08</time>
+
+                <span class="post-meta-divider">|</span>
+
+                <span title="更新时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text"></i>
+                </span>
+                <time datetime="2019-01-12" class="post-list__meta--date date">2019-01-12</time>
+
+                <!-- 如果有分类 -->
+                
+                <span class="post-meta-divider">|</span>
+                <font class="categories">
+                  <span title="分类" class="post-meta-item-icon">
+                    <i class="fa fa-folder-o"></i>
+                  </span>
+                    <a class="categories-link" href="/categories/爬虫/">爬虫</a>
+                </font>
+                
+
+                <!-- 如果有tags -->
+                
+                <span class="post-meta-divider">|</span>
+                <span title="标签" class="post-meta-item-icon">
+                   <i class="fa fa-tags"></i>
+                </span>
+                <font class="tags">
+                    <a class="tags-link" href="/tags/python/">python</a>, <a class="tags-link" href="/tags/scrapy/">scrapy</a>
+                </font>
+                
+
+            </div>
+            <br>
+            <!-- 如果有description就显示，如果没有就显示more前边的 -->
+            <div class="excerpt">
+                
+                <h2 id="使用Scrapy爬虫天猫数据"><a href="#使用Scrapy爬虫天猫数据" class="headerlink" title="使用Scrapy爬虫天猫数据"></a>使用Scrapy爬虫天猫数据</h2><p>11111<br><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote></p>
+<pre><code class="java">public static void main{
+    public static static i static i iiiii eee ee rrr ttt yy static(int aaa){
+        int a =1;
+        String s = &quot;ss&quot;;
+    }
+}
+</code></pre>
+                
+            </div>
+
+            <hr class="post-list__divider" />
+        </li>
+        
+        
+        <li>
+            <h2 class="post-list__post-title post-title">
+                <a href="/2018/02/22/t2-md/" title="link to 标题4">标题4</a>
+            </h2>
+
+            <div class="post-list__meta">
+                <span title="建立时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text-o"></i>
+                </span>
+                <time datetime="2018-02-22" class="post-list__meta--date date">2018-02-22</time>
+
+                <span class="post-meta-divider">|</span>
+
+                <span title="更新时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text"></i>
+                </span>
+                <time datetime="2018-01-22" class="post-list__meta--date date">2018-01-22</time>
+
+                <!-- 如果有分类 -->
+                
+                <span class="post-meta-divider">|</span>
+                <font class="categories">
+                  <span title="分类" class="post-meta-item-icon">
+                    <i class="fa fa-folder-o"></i>
+                  </span>
+                    <a class="categories-link" href="/categories/测试2/">测试2</a>
+                </font>
+                
+
+                <!-- 如果有tags -->
+                
+                <span class="post-meta-divider">|</span>
+                <span title="标签" class="post-meta-item-icon">
+                   <i class="fa fa-tags"></i>
+                </span>
+                <font class="tags">
+                    <a class="tags-link" href="/tags/scala/">scala</a>
+                </font>
+                
+
+            </div>
+            <br>
+            <!-- 如果有description就显示，如果没有就显示more前边的 -->
+            <div class="excerpt">
+                
+            </div>
+
+            <hr class="post-list__divider" />
+        </li>
+        
+        
+        <li>
+            <h2 class="post-list__post-title post-title">
+                <a href="/2018/01/08/test-md - 副本 (3)/" title="link to Scrapy1">Scrapy1</a>
+            </h2>
+
+            <div class="post-list__meta">
+                <span title="建立时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text-o"></i>
+                </span>
+                <time datetime="2018-01-08" class="post-list__meta--date date">2018-01-08</time>
+
+                <span class="post-meta-divider">|</span>
+
+                <span title="更新时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text"></i>
+                </span>
+                <time datetime="2019-01-12" class="post-list__meta--date date">2019-01-12</time>
+
+                <!-- 如果有分类 -->
+                
+                <span class="post-meta-divider">|</span>
+                <font class="categories">
+                  <span title="分类" class="post-meta-item-icon">
+                    <i class="fa fa-folder-o"></i>
+                  </span>
+                    <a class="categories-link" href="/categories/爬虫/">爬虫</a>
+                </font>
+                
+
+                <!-- 如果有tags -->
+                
+                <span class="post-meta-divider">|</span>
+                <span title="标签" class="post-meta-item-icon">
+                   <i class="fa fa-tags"></i>
+                </span>
+                <font class="tags">
+                    <a class="tags-link" href="/tags/python/">python</a>, <a class="tags-link" href="/tags/scrapy/">scrapy</a>
+                </font>
+                
+
+            </div>
+            <br>
+            <!-- 如果有description就显示，如果没有就显示more前边的 -->
+            <div class="excerpt">
+                
+                <h2 id="使用Scrapy爬虫天猫数据"><a href="#使用Scrapy爬虫天猫数据" class="headerlink" title="使用Scrapy爬虫天猫数据"></a>使用Scrapy爬虫天猫数据</h2><p>11111<br><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote></p>
+<pre><code class="java">public static void main{
+    public static static i static i iiiii eee ee rrr ttt yy static(int aaa){
+        int a =1;
+        String s = &quot;ss&quot;;
+    }
+}
+</code></pre>
+                
+            </div>
+
+            <hr class="post-list__divider" />
+        </li>
+        
+        
+        <li>
+            <h2 class="post-list__post-title post-title">
+                <a href="/2018/01/08/test-md - 副本/" title="link to 标题2">标题2</a>
+            </h2>
+
+            <div class="post-list__meta">
+                <span title="建立时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text-o"></i>
+                </span>
+                <time datetime="2018-01-08" class="post-list__meta--date date">2018-01-08</time>
+
+                <span class="post-meta-divider">|</span>
+
+                <span title="更新时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text"></i>
+                </span>
+                <time datetime="2019-01-12" class="post-list__meta--date date">2019-01-12</time>
+
+                <!-- 如果有分类 -->
+                
+                <span class="post-meta-divider">|</span>
+                <font class="categories">
+                  <span title="分类" class="post-meta-item-icon">
+                    <i class="fa fa-folder-o"></i>
+                  </span>
+                    <a class="categories-link" href="/categories/爬虫/">爬虫</a>
+                </font>
+                
+
+                <!-- 如果有tags -->
+                
+                <span class="post-meta-divider">|</span>
+                <span title="标签" class="post-meta-item-icon">
+                   <i class="fa fa-tags"></i>
+                </span>
+                <font class="tags">
+                    <a class="tags-link" href="/tags/python/">python</a>, <a class="tags-link" href="/tags/scrapy/">scrapy</a>
+                </font>
+                
+
+            </div>
+            <br>
+            <!-- 如果有description就显示，如果没有就显示more前边的 -->
+            <div class="excerpt">
+                
+                <h2 id="使用Scrapy爬虫天猫数据"><a href="#使用Scrapy爬虫天猫数据" class="headerlink" title="使用Scrapy爬虫天猫数据"></a>使用Scrapy爬虫天猫数据</h2><p>11111<br><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote></p>
+<pre><code class="java">public static void main{
+    public static static i static i iiiii eee ee rrr ttt yy static(int aaa){
+        int a =1;
+        String s = &quot;ss&quot;;
+    }
+}
+</code></pre>
+                
+            </div>
+
+            <hr class="post-list__divider" />
+        </li>
+        
+        
+        <li>
+            <h2 class="post-list__post-title post-title">
+                <a href="/2018/01/08/test-md/" title="link to 题目1">题目1</a>
             </h2>
 
             <div class="post-list__meta">
@@ -329,8 +569,16 @@ classes that you can use:
                     </div>
                     <nav class="header-menu">
                         <ul>
-                            <li class="mobile-menu-li"><a class="active" href="/">主页</a></li>
-                            <li class="mobile-menu-li"><a href="/archives">归档</a></li>
+                            <li class="mobile-menu-li mobile-menu-home">
+                                
+                                    <a href="/">主页</a>
+                                
+                            </li>
+                            <li class="mobile-menu-li mobile-menu-archives">
+                                
+                                    <a href="/general/" >归档</a>
+                                
+                            </li>
                         </ul>
                     </nav>
                 </header>
@@ -354,7 +602,241 @@ classes that you can use:
         
         <li>
             <h2 class="post-list__post-title post-title">
-                <a href="/2018/01/08/test-md/" title="link to Scrapy">Scrapy</a>
+                <a href="/2019/01/08/test-md - 副本 (2)/" title="link to 标题3">标题3</a>
+            </h2>
+
+            <div class="post-list__meta">
+                <span title="建立时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text-o"></i>
+                </span>
+                <time datetime="2019-01-08" class="post-list__meta--date date">2019-01-08</time>
+
+                <span class="post-meta-divider">|</span>
+
+                <span title="更新时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text"></i>
+                </span>
+                <time datetime="2019-01-12" class="post-list__meta--date date">2019-01-12</time>
+
+                <!-- 如果有分类 -->
+                
+                <span class="post-meta-divider">|</span>
+                <font class="categories">
+                  <span title="分类" class="post-meta-item-icon">
+                    <i class="fa fa-folder-o"></i>
+                  </span>
+                    <a class="categories-link" href="/categories/爬虫/">爬虫</a>
+                </font>
+                
+
+                <!-- 如果有tags -->
+                
+                <span class="post-meta-divider">|</span>
+                <span title="标签" class="post-meta-item-icon">
+                   <i class="fa fa-tags"></i>
+                </span>
+                <font class="tags">
+                    <a class="tags-link" href="/tags/python/">python</a>, <a class="tags-link" href="/tags/scrapy/">scrapy</a>
+                </font>
+                
+
+            </div>
+            <br>
+            <!-- 如果有description就显示，如果没有就显示more前边的 -->
+            <div class="excerpt">
+                
+                <h2 id="使用Scrapy爬虫天猫数据"><a href="#使用Scrapy爬虫天猫数据" class="headerlink" title="使用Scrapy爬虫天猫数据"></a>使用Scrapy爬虫天猫数据</h2><p>11111<br><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote></p>
+<pre><code class="java">public static void main{
+    public static static i static i iiiii eee ee rrr ttt yy static(int aaa){
+        int a =1;
+        String s = &quot;ss&quot;;
+    }
+}
+</code></pre>
+                
+            </div>
+
+            <hr class="post-list__divider" />
+        </li>
+        
+        
+        <li>
+            <h2 class="post-list__post-title post-title">
+                <a href="/2018/02/22/t2-md/" title="link to 标题4">标题4</a>
+            </h2>
+
+            <div class="post-list__meta">
+                <span title="建立时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text-o"></i>
+                </span>
+                <time datetime="2018-02-22" class="post-list__meta--date date">2018-02-22</time>
+
+                <span class="post-meta-divider">|</span>
+
+                <span title="更新时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text"></i>
+                </span>
+                <time datetime="2018-01-22" class="post-list__meta--date date">2018-01-22</time>
+
+                <!-- 如果有分类 -->
+                
+                <span class="post-meta-divider">|</span>
+                <font class="categories">
+                  <span title="分类" class="post-meta-item-icon">
+                    <i class="fa fa-folder-o"></i>
+                  </span>
+                    <a class="categories-link" href="/categories/测试2/">测试2</a>
+                </font>
+                
+
+                <!-- 如果有tags -->
+                
+                <span class="post-meta-divider">|</span>
+                <span title="标签" class="post-meta-item-icon">
+                   <i class="fa fa-tags"></i>
+                </span>
+                <font class="tags">
+                    <a class="tags-link" href="/tags/scala/">scala</a>
+                </font>
+                
+
+            </div>
+            <br>
+            <!-- 如果有description就显示，如果没有就显示more前边的 -->
+            <div class="excerpt">
+                
+            </div>
+
+            <hr class="post-list__divider" />
+        </li>
+        
+        
+        <li>
+            <h2 class="post-list__post-title post-title">
+                <a href="/2018/01/08/test-md - 副本 (3)/" title="link to Scrapy1">Scrapy1</a>
+            </h2>
+
+            <div class="post-list__meta">
+                <span title="建立时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text-o"></i>
+                </span>
+                <time datetime="2018-01-08" class="post-list__meta--date date">2018-01-08</time>
+
+                <span class="post-meta-divider">|</span>
+
+                <span title="更新时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text"></i>
+                </span>
+                <time datetime="2019-01-12" class="post-list__meta--date date">2019-01-12</time>
+
+                <!-- 如果有分类 -->
+                
+                <span class="post-meta-divider">|</span>
+                <font class="categories">
+                  <span title="分类" class="post-meta-item-icon">
+                    <i class="fa fa-folder-o"></i>
+                  </span>
+                    <a class="categories-link" href="/categories/爬虫/">爬虫</a>
+                </font>
+                
+
+                <!-- 如果有tags -->
+                
+                <span class="post-meta-divider">|</span>
+                <span title="标签" class="post-meta-item-icon">
+                   <i class="fa fa-tags"></i>
+                </span>
+                <font class="tags">
+                    <a class="tags-link" href="/tags/python/">python</a>, <a class="tags-link" href="/tags/scrapy/">scrapy</a>
+                </font>
+                
+
+            </div>
+            <br>
+            <!-- 如果有description就显示，如果没有就显示more前边的 -->
+            <div class="excerpt">
+                
+                <h2 id="使用Scrapy爬虫天猫数据"><a href="#使用Scrapy爬虫天猫数据" class="headerlink" title="使用Scrapy爬虫天猫数据"></a>使用Scrapy爬虫天猫数据</h2><p>11111<br><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote></p>
+<pre><code class="java">public static void main{
+    public static static i static i iiiii eee ee rrr ttt yy static(int aaa){
+        int a =1;
+        String s = &quot;ss&quot;;
+    }
+}
+</code></pre>
+                
+            </div>
+
+            <hr class="post-list__divider" />
+        </li>
+        
+        
+        <li>
+            <h2 class="post-list__post-title post-title">
+                <a href="/2018/01/08/test-md - 副本/" title="link to 标题2">标题2</a>
+            </h2>
+
+            <div class="post-list__meta">
+                <span title="建立时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text-o"></i>
+                </span>
+                <time datetime="2018-01-08" class="post-list__meta--date date">2018-01-08</time>
+
+                <span class="post-meta-divider">|</span>
+
+                <span title="更新时间" class="post-meta-item-icon">
+                   <i class="fa fa-file-text"></i>
+                </span>
+                <time datetime="2019-01-12" class="post-list__meta--date date">2019-01-12</time>
+
+                <!-- 如果有分类 -->
+                
+                <span class="post-meta-divider">|</span>
+                <font class="categories">
+                  <span title="分类" class="post-meta-item-icon">
+                    <i class="fa fa-folder-o"></i>
+                  </span>
+                    <a class="categories-link" href="/categories/爬虫/">爬虫</a>
+                </font>
+                
+
+                <!-- 如果有tags -->
+                
+                <span class="post-meta-divider">|</span>
+                <span title="标签" class="post-meta-item-icon">
+                   <i class="fa fa-tags"></i>
+                </span>
+                <font class="tags">
+                    <a class="tags-link" href="/tags/python/">python</a>, <a class="tags-link" href="/tags/scrapy/">scrapy</a>
+                </font>
+                
+
+            </div>
+            <br>
+            <!-- 如果有description就显示，如果没有就显示more前边的 -->
+            <div class="excerpt">
+                
+                <h2 id="使用Scrapy爬虫天猫数据"><a href="#使用Scrapy爬虫天猫数据" class="headerlink" title="使用Scrapy爬虫天猫数据"></a>使用Scrapy爬虫天猫数据</h2><p>11111<br><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote></p>
+<pre><code class="java">public static void main{
+    public static static i static i iiiii eee ee rrr ttt yy static(int aaa){
+        int a =1;
+        String s = &quot;ss&quot;;
+    }
+}
+</code></pre>
+                
+            </div>
+
+            <hr class="post-list__divider" />
+        </li>
+        
+        
+        <li>
+            <h2 class="post-list__post-title post-title">
+                <a href="/2018/01/08/test-md/" title="link to 题目1">题目1</a>
             </h2>
 
             <div class="post-list__meta">
@@ -442,6 +924,7 @@ classes that you can use:
     
 </footer>
             </div>
+            <script src="/js/zepto.min.js"></script>
         </div>
     </div>
     <!-- 这里的页面单独提出来了-->

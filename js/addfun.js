@@ -10,9 +10,9 @@ new WOW().init();
 // highlight
 hljs.initHighlightingOnLoad();
 
+//标签列表与标签云的显示切换
 $(".tag-switch").click(function() {
     if ($("#tag-list-bt").css("display") == "none") {
-
         $("#tag-list-bt").css("display", "inline-flex");
         $("#tag-cloud-bt").css("display", "none");
 
@@ -26,3 +26,9 @@ $(".tag-switch").click(function() {
         $("#tag-cloud").slideUp(1000);
     }
 });
+/* 增加active样式，没用上
+$(".header-menu a").click(function(){
+    $(".header-menu a").removeClass("active");
+    $(this).addClass("active");
+})
+*/

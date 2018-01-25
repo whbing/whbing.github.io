@@ -8,7 +8,7 @@
     
 
     <title>
-      归档 
+      归档
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -56,7 +56,8 @@
         <!-- 这里单独引用side-pannel模块,里面是一个header标签 -->
         <!--该文件仅包含header部分，包括背景图、遮罩层、目录等-->
 
-<header class="panel-cover panel-cover--collapsed">
+<header class="panel-cover panel-cover--collapsed panel-cover--collapsed--origin">
+
 
 
   <div class="panel-main">
@@ -192,13 +193,19 @@ classes that you can use:
 
     <div class="panel-cover--overlay"></div>
   </div>
+
 </header>
+<!--如果不是home，加一个side的复制层-->
+
+    <div class="panel-cover--collapsed panel-cover--collapsed--copy"></div>
+
 
         <div class="content-wrapper">
             <div class="content-wrapper__inner entry">
                 
 
 <!--这里是归档的页面-->
+<!--
 <article class="post-container post-container--single">
     <header class="post-header">
         <h3 class="post-title">归档</h3>
@@ -208,18 +215,205 @@ classes that you can use:
         </section>
     </header>
 </article>
+-->
 
 <div class="archive-meta">
     
         <!--<h3>归档</h3>-->
 
-        <div class="archiveslist">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li></ul>
+        <div class="general-list">
+            
+<!--以下是html-->
+<div id="posts-list" class="posts-collapse">
+    <span class="archive-move-on"></span>
+    <span class="archive-page-counter">
+        目前共计 5 篇日志
+    </span>
+    <div class="archive-list-item">
+    
+        
+            <!--年份-->
+            <div class="year-wrap">
+                <div class="year">
+                    <span class="collection-title">
+                        <!--<a class="list-year-link" href ="/archives/2019/">-->
+                        <a class="list-year-link" href ="javascript:void() ">
+                            <h2>2019</h2>
+                        </a>
+                        
+                        <span class="year-num"> (1篇)</span>
+                        
+                    </span>
+
+                </div>
+                <!--月份-->
+                <div class="month-wrap">
+
+                    
+                    
+
+                        <div class="month">
+                            <h3>
+                                <!--<a class="archive-list-link" href ="/archives/2019/01/">-->
+                                <a class="archive-list-link" href ="javascript:void()">
+                                    1月
+                                </a>
+                            </h3>
+                        </div>
+                        <article class="posts-list">
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2019/01/08/test-md - 副本 (2)/index.html">
+                                        标题3
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        01-01
+                                    </time>
+                                </div>
+                            </div>
+                        
+                        </article>
+                    
+
+                </div>
+
+            </div>
+
+    
+        
+            <!--年份-->
+            <div class="year-wrap">
+                <div class="year">
+                    <span class="collection-title">
+                        <!--<a class="list-year-link" href ="/archives/2018/">-->
+                        <a class="list-year-link" href ="javascript:void() ">
+                            <h2>2018</h2>
+                        </a>
+                        
+                        <span class="year-num"> (4篇)</span>
+                        
+                    </span>
+
+                </div>
+                <!--月份-->
+                <div class="month-wrap">
+
+                    
+                    
+
+                        <div class="month">
+                            <h3>
+                                <!--<a class="archive-list-link" href ="/archives/2018/02/">-->
+                                <a class="archive-list-link" href ="javascript:void()">
+                                    2月
+                                </a>
+                            </h3>
+                        </div>
+                        <article class="posts-list">
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2018/02/22/t2-md/index.html">
+                                        标题4
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        02-02
+                                    </time>
+                                </div>
+                            </div>
+                        
+                        </article>
+                    
+
+                        <div class="month">
+                            <h3>
+                                <!--<a class="archive-list-link" href ="/archives/2018/02/">-->
+                                <a class="archive-list-link" href ="javascript:void()">
+                                    1月
+                                </a>
+                            </h3>
+                        </div>
+                        <article class="posts-list">
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2018/01/08/test-md - 副本 (3)/index.html">
+                                        Scrapy1
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        01-01
+                                    </time>
+                                </div>
+                            </div>
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2018/01/08/test-md - 副本/index.html">
+                                        标题2
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        01-01
+                                    </time>
+                                </div>
+                            </div>
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2018/01/08/test-md/index.html">
+                                        题目1
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        01-01
+                                    </time>
+                                </div>
+                            </div>
+                        
+                        </article>
+                    
+
+                </div>
+
+            </div>
+
+    
+    </div>
+</div>
         </div>
     
 
     <!--
     
+        
+            <div class="collection-title">
+                <h2 class="archive-year motion-element" id="archive-year-2019">2019</h2>
+            </div>
+            
+        
+            <div class="collection-title">
+                <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
+            </div>
+            
+        
+            <div class="collection-title">
+                <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
+            </div>
+            
+        
+            <div class="collection-title">
+                <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
+            </div>
+            
         
             <div class="collection-title">
                 <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
@@ -266,8 +460,16 @@ classes that you can use:
                     </div>
                     <nav class="header-menu">
                         <ul>
-                            <li class="mobile-menu-li"><a class="active" href="/">主页</a></li>
-                            <li class="mobile-menu-li"><a href="/archives">归档</a></li>
+                            <li class="mobile-menu-li mobile-menu-home">
+                                
+                                    <a href="/">主页</a>
+                                
+                            </li>
+                            <li class="mobile-menu-li mobile-menu-archives">
+                                
+                                    <a href="/general/" >归档</a>
+                                
+                            </li>
                         </ul>
                     </nav>
                 </header>
@@ -280,6 +482,7 @@ classes that you can use:
                 
 
 <!--这里是归档的页面-->
+<!--
 <article class="post-container post-container--single">
     <header class="post-header">
         <h3 class="post-title">归档</h3>
@@ -289,18 +492,205 @@ classes that you can use:
         </section>
     </header>
 </article>
+-->
 
 <div class="archive-meta">
     
         <!--<h3>归档</h3>-->
 
-        <div class="archiveslist">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li></ul>
+        <div class="general-list">
+            
+<!--以下是html-->
+<div id="posts-list" class="posts-collapse">
+    <span class="archive-move-on"></span>
+    <span class="archive-page-counter">
+        目前共计 5 篇日志
+    </span>
+    <div class="archive-list-item">
+    
+        
+            <!--年份-->
+            <div class="year-wrap">
+                <div class="year">
+                    <span class="collection-title">
+                        <!--<a class="list-year-link" href ="/archives/2019/">-->
+                        <a class="list-year-link" href ="javascript:void() ">
+                            <h2>2019</h2>
+                        </a>
+                        
+                        <span class="year-num"> (1篇)</span>
+                        
+                    </span>
+
+                </div>
+                <!--月份-->
+                <div class="month-wrap">
+
+                    
+                    
+
+                        <div class="month">
+                            <h3>
+                                <!--<a class="archive-list-link" href ="/archives/2019/01/">-->
+                                <a class="archive-list-link" href ="javascript:void()">
+                                    1月
+                                </a>
+                            </h3>
+                        </div>
+                        <article class="posts-list">
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2019/01/08/test-md - 副本 (2)/index.html">
+                                        标题3
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        01-01
+                                    </time>
+                                </div>
+                            </div>
+                        
+                        </article>
+                    
+
+                </div>
+
+            </div>
+
+    
+        
+            <!--年份-->
+            <div class="year-wrap">
+                <div class="year">
+                    <span class="collection-title">
+                        <!--<a class="list-year-link" href ="/archives/2018/">-->
+                        <a class="list-year-link" href ="javascript:void() ">
+                            <h2>2018</h2>
+                        </a>
+                        
+                        <span class="year-num"> (4篇)</span>
+                        
+                    </span>
+
+                </div>
+                <!--月份-->
+                <div class="month-wrap">
+
+                    
+                    
+
+                        <div class="month">
+                            <h3>
+                                <!--<a class="archive-list-link" href ="/archives/2018/02/">-->
+                                <a class="archive-list-link" href ="javascript:void()">
+                                    2月
+                                </a>
+                            </h3>
+                        </div>
+                        <article class="posts-list">
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2018/02/22/t2-md/index.html">
+                                        标题4
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        02-02
+                                    </time>
+                                </div>
+                            </div>
+                        
+                        </article>
+                    
+
+                        <div class="month">
+                            <h3>
+                                <!--<a class="archive-list-link" href ="/archives/2018/02/">-->
+                                <a class="archive-list-link" href ="javascript:void()">
+                                    1月
+                                </a>
+                            </h3>
+                        </div>
+                        <article class="posts-list">
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2018/01/08/test-md - 副本 (3)/index.html">
+                                        Scrapy1
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        01-01
+                                    </time>
+                                </div>
+                            </div>
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2018/01/08/test-md - 副本/index.html">
+                                        标题2
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        01-01
+                                    </time>
+                                </div>
+                            </div>
+                        
+                            <div class="article-item">
+                                <h3 class="post-title">
+                                    <a class="archive-list-link" href="/2018/01/08/test-md/index.html">
+                                        题目1
+                                    </a>
+                                </h3>
+                                <div class="post-meta">
+                                    <time class="post-time" datetime="2017-09-25T09:54:41+08:00" content="2017-09-25">
+                                        01-01
+                                    </time>
+                                </div>
+                            </div>
+                        
+                        </article>
+                    
+
+                </div>
+
+            </div>
+
+    
+    </div>
+</div>
         </div>
     
 
     <!--
     
+        
+            <div class="collection-title">
+                <h2 class="archive-year motion-element" id="archive-year-2019">2019</h2>
+            </div>
+            
+        
+            <div class="collection-title">
+                <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
+            </div>
+            
+        
+            <div class="collection-title">
+                <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
+            </div>
+            
+        
+            <div class="collection-title">
+                <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
+            </div>
+            
         
             <div class="collection-title">
                 <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
@@ -316,6 +706,7 @@ classes that you can use:
     
 </footer>
             </div>
+            <script src="/js/zepto.min.js"></script>
         </div>
     </div>
     <!-- 这里的页面单独提出来了-->
