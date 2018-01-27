@@ -134,7 +134,7 @@ pre code{
         position: absolute;
         z-index: 101;
         left: 1%;
-        top: 2%;
+        top: 5px;
         color: #fff;
         font-size: 120%; /*1024-1280*/
     }

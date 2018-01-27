@@ -27,9 +27,21 @@ $(".tag-switch").click(function() {
     }
 });
 
-/* 增加active样式，没用上
-$(".header-menu a").click(function(){
-    $(".header-menu a").removeClass("active");
-    $(this).addClass("active");
-})
-*/
+/* 增加样式，没用上 */
+
+$(".slider-trigger").click(function(){
+    //$("#m-header").removeClass("active");
+    //$(this).addClass("active");
+    if($("#m-header").height()!=32){
+        $("#m-header").animate({'height':'32px'},1000,"swing");
+        $(".intrude-less").animate({'opacity':'0'},100);
+        $(".overlay").animate({'height':'32px'},1000,"swing");
+
+    }else{
+        $("#m-header").animate({'height':$("#mobile-nav").height()},1000,"swing");
+        $(".intrude-less").animate({'opacity':'1'},100);
+        $(".overlay").animate({'height':'110px'},1000,"swing");
+
+    }
+});
+
