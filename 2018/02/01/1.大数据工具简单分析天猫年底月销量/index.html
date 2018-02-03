@@ -4,8 +4,11 @@
     <!-- 这一部分是所有页面都要加载的 -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
     <title>
-      spark简单分析天猫年底月销量
+      spark简单分析天猫年底月销量 | whbing
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -22,12 +25,12 @@
 <meta property="og:site_name" content="whbing">
 <meta property="og:description" content="1.引言在线上交易早已成熟的今天，电商交易量究竟有多少？为了清晰地比较天猫月销量，本文爬取了天猫2017年底、2018年初主流分类商品大量数据，并做了简单的数据统计。整体流程如下：  说明：利用scrapy爬取天猫店铺数据约50万条，导入HDFS分布式存储，利用大数据组件spark操作算子分析及sparkSQL查询分析得出处理结果，最后，EChart前端组件将结果以图表形式展现出来。 2.分析过程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://img.blog.csdn.net/20180201231952821?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYW5zd2VyMTAwYW5zd2Vy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="https://whbing.github.io/images/tmall/out.png">
 <meta property="og:updated_time" content="2018-02-01T07:21:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spark简单分析天猫年底月销量 | whbing">
 <meta name="twitter:description" content="1.引言在线上交易早已成熟的今天，电商交易量究竟有多少？为了清晰地比较天猫月销量，本文爬取了天猫2017年底、2018年初主流分类商品大量数据，并做了简单的数据统计。整体流程如下：  说明：利用scrapy爬取天猫店铺数据约50万条，导入HDFS分布式存储，利用大数据组件spark操作算子分析及sparkSQL查询分析得出处理结果，最后，EChart前端组件将结果以图表形式展现出来。 2.分析过程">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20180201231952821?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYW5zd2VyMTAwYW5zd2Vy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:image" content="https://whbing.github.io/images/tmall/out.png">
     
     
     
@@ -265,7 +268,7 @@ classes that you can use:
 
   <section id="post-content" class="article-content post">
     <h1 id="1-引言"><a href="#1-引言" class="headerlink" title="1.引言"></a>1.引言</h1><p>在线上交易早已成熟的今天，电商交易量究竟有多少？为了清晰地比较天猫月销量，本文爬取了天猫2017年底、2018年初主流分类商品大量数据，并做了简单的数据统计。整体流程如下：</p>
-<p><img src="http://img.blog.csdn.net/20180201231952821?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYW5zd2VyMTAwYW5zd2Vy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="/images/tmall/out.png" alt="这里写图片描述"></p>
 <p>说明：利用scrapy爬取天猫店铺数据约<code>50万</code>条，导入<code>HDFS</code>分布式存储，利用大数据组件<code>spark</code>操作算子分析及<code>sparkSQL</code>查询分析得出处理结果，最后，<code>EChart</code>前端组件将结果以图表形式展现出来。</p>
 <h1 id="2-分析过程"><a href="#2-分析过程" class="headerlink" title="2.分析过程"></a>2.分析过程</h1><h2 id="2-1-scrapy爬取天猫数据"><a href="#2-1-scrapy爬取天猫数据" class="headerlink" title="2.1 scrapy爬取天猫数据"></a>2.1 scrapy爬取天猫数据</h2><ul>
 <li><code>Scrapy</code>是<code>Python</code>开发的一个快速、高层次的爬虫框架，用于抓取web站点并从页面中提取结构化的数据。</li>
@@ -379,6 +382,143 @@ classes that you can use:
 <li>ECharts，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，可高度个性化定制的数据可视化图表。</li>
 </ul>
 <p>(1) 对全部数据按销量排序，结果如下：</p>
+
+
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="total1" style="height:700px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('total1'), 'macarons');
+
+                var option = {
+                	    title : {
+                	        text: '总月销售量 图1',
+                	    },
+                	    tooltip : {
+                	        trigger: 'axis'
+                	    },
+                	    legend: {
+                	        data:['2017年12月']
+                	    },
+                	    toolbox: {
+                	        show : true,
+                	        feature : {
+                	            //mark : {show: true},
+                	            //dataView : {show: true, readOnly: true},
+                	            //magicType: {show: true, type: ['line', 'bar']},
+                	            restore : {show: true},
+                	            saveAsImage : {show: true}
+                	        }
+                	    },
+                	    //calculable : true,
+                	    xAxis : [
+                	        {
+                	            type : 'value',
+                	            boundaryGap : [0, 0.01]
+                	        }
+                	    ],
+                	    yAxis : [
+                	        {
+                	            type : 'category',
+                	            data : [  '裤子女',
+                	                      '秋裤',
+                	                      '保暖内衣',
+                	                        '棉袜',
+                	                      '打底衫女',
+                	                      '外套男装',
+                	                     '休闲裤男',
+                	                        '男鞋',
+                	                        '饼干',
+                	                    'iphone',
+                	                    '男士袜子',
+                	                    '毛衣女',
+            	                        '抽纸',
+            	                      '针织衫女',
+            	                      '牛仔裤男',
+           	                       '棉衣男',
+           	                     '针织衫男',
+           	                        '手套',
+           	                     '珊瑚绒睡衣',
+           	                       '清洁剂',
+           	                        '板鞋',
+           	                        '靴子'
+										].reverse()
+                	        }
+                	    ],
+
+                	    series : [
+                	        {
+                	            name:'2017年12月',
+                	            type:'bar',
+                	            data:[17876900,
+                	                  12177040,
+                	                  11318300,
+                	                  9809210.0,
+                	                  8715402.0,
+                	                  8641977.0,
+                	                  8609225.0,
+                	                  8176627.0,
+                	                  7864698.0,
+                	                  7321395.0,
+                	                  6933028.0,
+                	                  6290753.0,
+               	                   6096333.0,
+               	                   5841158.0,
+               	                5824355.0,
+          	                  5569577.0,
+          	                  5441920.0,
+          	                  5284268.0,
+          	                  5129904.0,
+          	                  4862618.0,
+          	                  4853351.0,
+          	                  4763410.0
+								].reverse(),
+								itemStyle:{
+				                    normal:{    //柱状图颜色
+				                        color:'#b6a2df',
+				                        label:{
+				                            show: true,   //显示文本
+				                            position: 'right',  //数据值位置
+				                            textStyle:{
+				                                color:'#0000FF',
+				                                fontSize:'15',
+
+				                            }
+				                        }
+				                    }
+				                }
+
+                	        }
+
+                	    ]
+
+                	};
+
+
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+            }
+        );
+    </script>
+
+
 
   </section>
 
@@ -502,7 +642,7 @@ classes that you can use:
 
   <section id="post-content" class="article-content post">
     <h1 id="1-引言"><a href="#1-引言" class="headerlink" title="1.引言"></a>1.引言</h1><p>在线上交易早已成熟的今天，电商交易量究竟有多少？为了清晰地比较天猫月销量，本文爬取了天猫2017年底、2018年初主流分类商品大量数据，并做了简单的数据统计。整体流程如下：</p>
-<p><img src="http://img.blog.csdn.net/20180201231952821?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYW5zd2VyMTAwYW5zd2Vy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="/images/tmall/out.png" alt="这里写图片描述"></p>
 <p>说明：利用scrapy爬取天猫店铺数据约<code>50万</code>条，导入<code>HDFS</code>分布式存储，利用大数据组件<code>spark</code>操作算子分析及<code>sparkSQL</code>查询分析得出处理结果，最后，<code>EChart</code>前端组件将结果以图表形式展现出来。</p>
 <h1 id="2-分析过程"><a href="#2-分析过程" class="headerlink" title="2.分析过程"></a>2.分析过程</h1><h2 id="2-1-scrapy爬取天猫数据"><a href="#2-1-scrapy爬取天猫数据" class="headerlink" title="2.1 scrapy爬取天猫数据"></a>2.1 scrapy爬取天猫数据</h2><ul>
 <li><code>Scrapy</code>是<code>Python</code>开发的一个快速、高层次的爬虫框架，用于抓取web站点并从页面中提取结构化的数据。</li>
@@ -616,142 +756,144 @@ classes that you can use:
 <li>ECharts，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，可高度个性化定制的数据可视化图表。</li>
 </ul>
 <p>(1) 对全部数据按销量排序，结果如下：</p>
-<!---------------------------------------------------------->
-      <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-      <div id="total1" style="height:700px"></div>
-      <!-- ECharts单文件引入 -->
-      <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
-
-      <script type="text/javascript">
-          // 路径配置
-          require.config({
-              paths: {
-                  echarts: 'http://echarts.baidu.com/build/dist'
-              }
-          });
-
-          // 使用
-          require(
-                  [
-                      'echarts',
-                      'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
-                  ],
-                  function (ec) {
-                      // 基于准备好的dom，初始化echarts图表
-                      var myChart = ec.init(document.getElementById('total1'), 'macarons');
-
-                      var option = {
-                          title : {
-                              text: '总月销售量 图1',
-                          },
-                          tooltip : {
-                              trigger: 'axis'
-                          },
-                          legend: {
-                              data:['2017年12月']
-                          },
-                          toolbox: {
-                              show : true,
-                              feature : {
-                                  //mark : {show: true},
-                                  //dataView : {show: true, readOnly: true},
-                                  //magicType: {show: true, type: ['line', 'bar']},
-                                  restore : {show: true},
-                                  saveAsImage : {show: true}
-                              }
-                          },
-                          //calculable : true,
-                          xAxis : [
-                              {
-                                  type : 'value',
-                                  boundaryGap : [0, 0.01]
-                              }
-                          ],
-                          yAxis : [
-                              {
-                                  type : 'category',
-                                  data : [  '裤子女',
-                                      '秋裤',
-                                      '保暖内衣',
-                                      '棉袜',
-                                      '打底衫女',
-                                      '外套男装',
-                                      '休闲裤男',
-                                      '男鞋',
-                                      '饼干',
-                                      'iphone',
-                                      '男士袜子',
-                                      '毛衣女',
-                                      '抽纸',
-                                      '针织衫女',
-                                      '牛仔裤男',
-                                      '棉衣男',
-                                      '针织衫男',
-                                      '手套',
-                                      '珊瑚绒睡衣',
-                                      '清洁剂',
-                                      '板鞋',
-                                      '靴子'
-                                  ].reverse()
-                              }
-                          ],
-
-                          series : [
-                              {
-                                  name:'2017年12月',
-                                  type:'bar',
-                                  data:[17876900,
-                                      12177040,
-                                      11318300,
-                                      9809210.0,
-                                      8715402.0,
-                                      8641977.0,
-                                      8609225.0,
-                                      8176627.0,
-                                      7864698.0,
-                                      7321395.0,
-                                      6933028.0,
-                                      6290753.0,
-                                      6096333.0,
-                                      5841158.0,
-                                      5824355.0,
-                                      5569577.0,
-                                      5441920.0,
-                                      5284268.0,
-                                      5129904.0,
-                                      4862618.0,
-                                      4853351.0,
-                                      4763410.0
-                                  ].reverse(),
-                                  itemStyle:{
-                                      normal:{    //柱状图颜色
-                                          color:'#b6a2df',
-                                          label:{
-                                              show: true,   //显示文本
-                                              position: 'right',  //数据值位置
-                                              textStyle:{
-                                                  color:'#0000FF',
-                                                  fontSize:'15',
-
-                                              }
-                                          }
-                                      }
-                                  }
-
-                              }
-
-                          ]
-
-                      };
 
 
-                      // 为echarts对象加载数据
-                      myChart.setOption(option);
-                  }
-          );
-      </script>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="total1" style="height:700px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
 
-      <!---------------------------------------------------------->
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('total1'), 'macarons');
+
+                var option = {
+                	    title : {
+                	        text: '总月销售量 图1',
+                	    },
+                	    tooltip : {
+                	        trigger: 'axis'
+                	    },
+                	    legend: {
+                	        data:['2017年12月']
+                	    },
+                	    toolbox: {
+                	        show : true,
+                	        feature : {
+                	            //mark : {show: true},
+                	            //dataView : {show: true, readOnly: true},
+                	            //magicType: {show: true, type: ['line', 'bar']},
+                	            restore : {show: true},
+                	            saveAsImage : {show: true}
+                	        }
+                	    },
+                	    //calculable : true,
+                	    xAxis : [
+                	        {
+                	            type : 'value',
+                	            boundaryGap : [0, 0.01]
+                	        }
+                	    ],
+                	    yAxis : [
+                	        {
+                	            type : 'category',
+                	            data : [  '裤子女',
+                	                      '秋裤',
+                	                      '保暖内衣',
+                	                        '棉袜',
+                	                      '打底衫女',
+                	                      '外套男装',
+                	                     '休闲裤男',
+                	                        '男鞋',
+                	                        '饼干',
+                	                    'iphone',
+                	                    '男士袜子',
+                	                    '毛衣女',
+            	                        '抽纸',
+            	                      '针织衫女',
+            	                      '牛仔裤男',
+           	                       '棉衣男',
+           	                     '针织衫男',
+           	                        '手套',
+           	                     '珊瑚绒睡衣',
+           	                       '清洁剂',
+           	                        '板鞋',
+           	                        '靴子'
+										].reverse()
+                	        }
+                	    ],
+
+                	    series : [
+                	        {
+                	            name:'2017年12月',
+                	            type:'bar',
+                	            data:[17876900,
+                	                  12177040,
+                	                  11318300,
+                	                  9809210.0,
+                	                  8715402.0,
+                	                  8641977.0,
+                	                  8609225.0,
+                	                  8176627.0,
+                	                  7864698.0,
+                	                  7321395.0,
+                	                  6933028.0,
+                	                  6290753.0,
+               	                   6096333.0,
+               	                   5841158.0,
+               	                5824355.0,
+          	                  5569577.0,
+          	                  5441920.0,
+          	                  5284268.0,
+          	                  5129904.0,
+          	                  4862618.0,
+          	                  4853351.0,
+          	                  4763410.0
+								].reverse(),
+								itemStyle:{
+				                    normal:{    //柱状图颜色
+				                        color:'#b6a2df',
+				                        label:{
+				                            show: true,   //显示文本
+				                            position: 'right',  //数据值位置
+				                            textStyle:{
+				                                color:'#0000FF',
+				                                fontSize:'15',
+
+				                            }
+				                        }
+				                    }
+				                }
+
+                	        }
+
+                	    ]
+
+                	};
+
+
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+            }
+        );
+    </script>
+
+
+
   </section>
 
   <section class="post-comments">
