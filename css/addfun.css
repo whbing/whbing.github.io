@@ -79,7 +79,17 @@ pre code{
     /*overflow-y: auto;*/
     word-break: keep-all;
     white-space: pre;
-    line-height: 2em;
+    line-height: 1.7em;
+}
+@media all and (max-width: 1279px) {
+    pre code{
+        /*overflow-x: auto;*/
+        /*overflow-y: auto;*/
+        word-break: keep-all;
+        white-space: pre;
+        font-size: 14px;
+        line-height: 1.7em;
+    }
 }
 /*首页h*/
 .article-content h1{
@@ -95,8 +105,9 @@ pre code{
     margin: 1em 0;
  }
 .article-content h4{
-    font-size: 1.4rem;
-    margin: 1em 0;
+    font-size: 1.0rem;
+    margin: 1.2em 0;
+    font-weight: bold;
 }
 /*响应式*/
 /*pc*/
@@ -388,3 +399,4 @@ span.year-num{
 }
 
 /***************genaral end***********/
+
