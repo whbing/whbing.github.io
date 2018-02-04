@@ -8,7 +8,7 @@
     
 
     <title>
-      spark简单分析天猫年底月销量 | whbing
+      spark简单分析天猫年底月销量
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -20,7 +20,7 @@
     <meta name="description" content="1.引言在线上交易早已成熟的今天，电商交易量究竟有多少？为了清晰地比较天猫月销量，本文爬取了天猫2017年底、2018年初主流分类商品大量数据，并做了简单的数据统计。整体流程如下：  说明：利用scrapy爬取天猫店铺数据约50万条，导入HDFS分布式存储，利用大数据组件spark操作算子分析及sparkSQL查询分析得出处理结果，最后，EChart前端组件将结果以图表形式展现出来。 2.分析过程">
 <meta name="keywords" content="scrapy,spark">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spark简单分析天猫年底月销量 | whbing">
+<meta property="og:title" content="spark简单分析天猫年底月销量">
 <meta property="og:url" content="https://whbing.github.io/2018/02/01/1.大数据工具简单分析天猫年底月销量/index.html">
 <meta property="og:site_name" content="whbing">
 <meta property="og:description" content="1.引言在线上交易早已成熟的今天，电商交易量究竟有多少？为了清晰地比较天猫月销量，本文爬取了天猫2017年底、2018年初主流分类商品大量数据，并做了简单的数据统计。整体流程如下：  说明：利用scrapy爬取天猫店铺数据约50万条，导入HDFS分布式存储，利用大数据组件spark操作算子分析及sparkSQL查询分析得出处理结果，最后，EChart前端组件将结果以图表形式展现出来。 2.分析过程">
@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://whbing.github.io/images/tmall/out.png">
 <meta property="og:updated_time" content="2018-02-01T07:21:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spark简单分析天猫年底月销量 | whbing">
+<meta name="twitter:title" content="spark简单分析天猫年底月销量">
 <meta name="twitter:description" content="1.引言在线上交易早已成熟的今天，电商交易量究竟有多少？为了清晰地比较天猫月销量，本文爬取了天猫2017年底、2018年初主流分类商品大量数据，并做了简单的数据统计。整体流程如下：  说明：利用scrapy爬取天猫店铺数据约50万条，导入HDFS分布式存储，利用大数据组件spark操作算子分析及sparkSQL查询分析得出处理结果，最后，EChart前端组件将结果以图表形式展现出来。 2.分析过程">
 <meta name="twitter:image" content="https://whbing.github.io/images/tmall/out.png">
     
@@ -273,7 +273,7 @@ classes that you can use:
 {&quot;title&quot;: &quot;Apple/苹果&quot;, &quot;price&quot;: &quot;8168.00&quot;, &quot;sales&quot;: 67000.0, &quot;class2&quot;: &quot;iphone&quot;, &quot;store&quot;: &quot;卓辰数码旗舰店&quot;, &quot;class1&quot;: &quot;手机&quot;}
 {&quot;title&quot;: &quot;Apple/苹果&quot;, &quot;price&quot;: &quot;9688.00&quot;, &quot;sales&quot;: 67000.0, &quot;class2&quot;: &quot;iphone&quot;, &quot;store&quot;: &quot;苏宁易购官方旗舰店&quot;, &quot;class1&quot;: &quot;手机&quot;}
 ...
-</code></pre><p><br><br>本部分详细过程及代码见 <a href="https://github.com/whbing/taobaospider" target="_blank" rel="external">github.com/whbing/taobaospider</a> 欢迎补充与完善</p>
+</code></pre><p><br><br>本部分详细过程及代码见 <a href="https://github.com/whbing/taobaospider" target="_blank" rel="noopener">github.com/whbing/taobaospider</a> 欢迎补充与完善</p>
 <hr>
 <h2 id="2-2-spark数据分析"><a href="#2-2-spark数据分析" class="headerlink" title="2.2 spark数据分析"></a>2.2 spark数据分析</h2><ul>
 <li><code>HDFS</code>，即<code>Hadoop</code>分布式文件系统(HDFS)，能提供高吞吐量的数据访问，非常适合大规模数据集上的应用。</li>
@@ -364,7 +364,7 @@ classes that you can use:
 |    绘本|  儿童读物|  3492248.0|       636|
 ...
 </code></pre>
-<p>本部分代码及文档见 <a href="https://github.com/whbing/TmallAnalysisWithSpark" target="_blank" rel="external">TmallAnalysis WithSpark</a></p>
+<p>本部分代码及文档见 <a href="https://github.com/whbing/TmallAnalysisWithSpark" target="_blank" rel="noopener">TmallAnalysis WithSpark</a></p>
 <hr>
 <h2 id="2-3-图表展示"><a href="#2-3-图表展示" class="headerlink" title="2.3 图表展示"></a>2.3 图表展示</h2><ul>
 <li><code>ECharts</code>，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，可高度个性化定制的数据可视化图表。</li>
@@ -1177,9 +1177,9 @@ classes that you can use:
 
 <h1 id="4-小结"><a href="#4-小结" class="headerlink" title="4 小结"></a>4 小结</h1><p>本文较为浅显的讲解了数据抓取–分析–展示的全过程。值的说明的是，由于数据非实时数据，可能有数据偏移；<br>spark的分析部分较为基础，更复杂的分析，后续会更新。欢迎对github文档的补充与代码的完善，欢迎指导。<br>附本次代码，详细说明见对应文档。</p>
 <ol>
-<li><p>数据爬虫见 <a href="https://github.com/whbing/taobaospider" target="_blank" rel="external">taobaospider</a></p>
+<li><p>数据爬虫见 <a href="https://github.com/whbing/taobaospider" target="_blank" rel="noopener">taobaospider</a></p>
 </li>
-<li><p>spark分析代码及Echart展示见 <a href="https://github.com/whbing/TmallAnalysisWithSpark" target="_blank" rel="external">TmallAnalysis WithSpark</a></p>
+<li><p>spark分析代码及Echart展示见 <a href="https://github.com/whbing/TmallAnalysisWithSpark" target="_blank" rel="noopener">TmallAnalysis WithSpark</a></p>
 </li>
 </ol>
 
@@ -1326,7 +1326,7 @@ classes that you can use:
 {&quot;title&quot;: &quot;Apple/苹果&quot;, &quot;price&quot;: &quot;8168.00&quot;, &quot;sales&quot;: 67000.0, &quot;class2&quot;: &quot;iphone&quot;, &quot;store&quot;: &quot;卓辰数码旗舰店&quot;, &quot;class1&quot;: &quot;手机&quot;}
 {&quot;title&quot;: &quot;Apple/苹果&quot;, &quot;price&quot;: &quot;9688.00&quot;, &quot;sales&quot;: 67000.0, &quot;class2&quot;: &quot;iphone&quot;, &quot;store&quot;: &quot;苏宁易购官方旗舰店&quot;, &quot;class1&quot;: &quot;手机&quot;}
 ...
-</code></pre><p><br><br>本部分详细过程及代码见 <a href="https://github.com/whbing/taobaospider" target="_blank" rel="external">github.com/whbing/taobaospider</a> 欢迎补充与完善</p>
+</code></pre><p><br><br>本部分详细过程及代码见 <a href="https://github.com/whbing/taobaospider" target="_blank" rel="noopener">github.com/whbing/taobaospider</a> 欢迎补充与完善</p>
 <hr>
 <h2 id="2-2-spark数据分析"><a href="#2-2-spark数据分析" class="headerlink" title="2.2 spark数据分析"></a>2.2 spark数据分析</h2><ul>
 <li><code>HDFS</code>，即<code>Hadoop</code>分布式文件系统(HDFS)，能提供高吞吐量的数据访问，非常适合大规模数据集上的应用。</li>
@@ -1417,7 +1417,7 @@ classes that you can use:
 |    绘本|  儿童读物|  3492248.0|       636|
 ...
 </code></pre>
-<p>本部分代码及文档见 <a href="https://github.com/whbing/TmallAnalysisWithSpark" target="_blank" rel="external">TmallAnalysis WithSpark</a></p>
+<p>本部分代码及文档见 <a href="https://github.com/whbing/TmallAnalysisWithSpark" target="_blank" rel="noopener">TmallAnalysis WithSpark</a></p>
 <hr>
 <h2 id="2-3-图表展示"><a href="#2-3-图表展示" class="headerlink" title="2.3 图表展示"></a>2.3 图表展示</h2><ul>
 <li><code>ECharts</code>，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，可高度个性化定制的数据可视化图表。</li>
@@ -2230,9 +2230,9 @@ classes that you can use:
 
 <h1 id="4-小结"><a href="#4-小结" class="headerlink" title="4 小结"></a>4 小结</h1><p>本文较为浅显的讲解了数据抓取–分析–展示的全过程。值的说明的是，由于数据非实时数据，可能有数据偏移；<br>spark的分析部分较为基础，更复杂的分析，后续会更新。欢迎对github文档的补充与代码的完善，欢迎指导。<br>附本次代码，详细说明见对应文档。</p>
 <ol>
-<li><p>数据爬虫见 <a href="https://github.com/whbing/taobaospider" target="_blank" rel="external">taobaospider</a></p>
+<li><p>数据爬虫见 <a href="https://github.com/whbing/taobaospider" target="_blank" rel="noopener">taobaospider</a></p>
 </li>
-<li><p>spark分析代码及Echart展示见 <a href="https://github.com/whbing/TmallAnalysisWithSpark" target="_blank" rel="external">TmallAnalysis WithSpark</a></p>
+<li><p>spark分析代码及Echart展示见 <a href="https://github.com/whbing/TmallAnalysisWithSpark" target="_blank" rel="noopener">TmallAnalysis WithSpark</a></p>
 </li>
 </ol>
 
